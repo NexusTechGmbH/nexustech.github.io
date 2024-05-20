@@ -48,7 +48,7 @@
     top: 0; /* Oben auf der Seite */
     left: 0; /* Links auf der Seite */
     z-index: 999; /* Über anderen Inhalten liegen */
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Google_Nexus.svg/2560px-Google_Nexus.svg.png');
+    background-image: url('Nexus.jpg');
     background-size: auto 80px;
     background-position: 20px 10px;
     background-repeat: no-repeat;
@@ -102,29 +102,29 @@
             color: rgba(68, 68, 68, 0.836);
         }
         .Überschrift {
-            color: black;
-            font-size: 40px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            margin: 50px;
-            margin-top: 140px;
-        }
-        @media only screen and (max-width: 1000px) {
-    .Überschrift {
-        font-size: 30px;
-        margin-top: 40px;
-    }
+    color: black;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative; /* Relative Positionierung */
+    text-align: center; /* Zentriert den Text horizontal */
+    text-decoration: none;
+    margin-top: 140px;
 }
-@media only screen and (max-width: 1000px) and (orientation: landscape) {
+@media only screen and (max-width: 1000px) {
     .Überschrift {
-        font-size: 30px;
-        margin-top: 40px;
+        margin-top: 50px; /* Beispielwert anpassen */
     }
 }
 
+
+.Überschrift::before {
+    content: ''; /* Erstellt ein leeres Element */
+    display: block;
+    width: 100%; /* Volle Breite des Containers */
+    height: 50px; /* Höhe des leeren Elements anpassen */
+    position: absolute; /* Absolute Positionierung relativ zum Elternelement */
+    top: -25px; /* Positioniert das Element über der Überschrift */
+}
         .box2 {
             background-color: rgb(200, 200, 200);
             color: rgb(0, 0, 0);
@@ -147,7 +147,6 @@
             text-decoration: none;
             margin: 25px;
         }
-        
         footer {
             background-color: #333;
             color: #fff;
@@ -177,22 +176,6 @@
         .footer a:hover {
             color: #bbb;
         }
-        /* Stile für den Container */
-.map-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Seitenverhältnis (Höhe / Breite) */
-}
-
-/* Stile für das eingebettete iframe */
-.map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
     </style>
 </head>
 <body>
@@ -202,26 +185,60 @@
         <button class="button-link" onclick="window.location.href='https://forms.gle/48qVW9LMPQK6uTXu5'">Jetzt bewerben!</button>
     </h1>
     <br>
-<h1 class="Überschrift">Kontaktmöglichkeiten:</h1>
+    <h1 class="Überschrift">Impressum:</h1>
+    <br>
+    <br>
+    Impressum
 <br>
 <br>
-    <h4>NexusTech GmbH<br>
-    Hanauer Landstraße 293<br>
-    60314 Frankfurt am Main<br>
-    <br>
-    <br>
-    E-Mail: nexustech@nexus.com<br></h4>
-    <br>
-    <br>
-    <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.3526249263077!2d8.723054575695008!3d50.11712317153037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0e63ed62d403%3A0x8436d5e19e90881e!2sHanauer%20Landstra%C3%9Fe%20293%2C%2060314%20Frankfurt%20am%20Main%2C%20Germany!5e0!3m2!1sen!2s!4v1715512458662!5m2!1sen!2s" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <br>    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+Angaben gemäß § 5 TMG:<br>
+<br>
+NexusTech GmbH<br>
+Hanauer Landstraße 293<br>
+60314 Frankfurt am Main<br>
+<br>
+Vertreten durch:<br>
+<br>
+Geschäftsführer: Leonie Berger<br>
+<br>
+Kontakt:<br>
+<br>
+E-Mail: nexustech@nexus.com<br>
+<br>
+Registereintrag:<br>
+<br>
+Eintragung im Handelsregister.<br>
+Registergericht: Amtsgericht Frankfurt am Main<br>
+Registernummer: HRB 591473<br>
+<br>
+Umsatzsteuer-ID:<br>
+<br>
+Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:<br>
+DE 194585672<br>
+<br>
+Berufsbezeichnung:<br>
+Plattform für Freelancer-Jobs<br>
+<br>
+Zuständige Aufsichtsbehörde:<br>
+<br>
+Regulierungsbehörde für Telekommunikation und Post<br>
+Canisiusstraße 21<br>
+55122 Mainz<br>
+<br>
+Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>
+<br>
+Leonie Berger<br>
+Hanauer Landstraße 293<br>
+60314 Frankfurt am Main<br>
+<br>
+Haftungsausschluss:<br>
+<br>
+Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.<br>
+<br>
+Datenschutzerklärung:<br>
+<br>
+Bitte beachten Sie unsere <a href="Datenschutzerklärung.html">Datenschutzerklärung</a><br>
+<br>
     <br>
     <br>
     <footer style="background-color: #333; color: #fff; padding: 80px 0; text-align: center;">
@@ -243,6 +260,6 @@
             }
         </style>
     </footer>
-
+    
 </body>
 </html>
