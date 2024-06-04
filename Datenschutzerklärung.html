@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .button-link {
+            background-color: rgba(0, 134, 223, 0.979);
+            border: none;
+            padding: 10px 40px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-decoration: none;
+            color: white;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button-link:hover,
+        .button-link:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .button-link a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .box {
+    background-color: rgba(0, 153, 255, 0.979);
+    height: 100px;
+    box-shadow: 14px 10px 63px -8px rgba(0, 0, 0, 0.712);
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: right; /* Ändert die Ausrichtung der Buttons */
+    align-items: center;
+    position: fixed;
+    width: 100%; /* Vollständige Breite des Bildschirms */
+    top: 0; /* Oben auf der Seite */
+    left: 0; /* Links auf der Seite */
+    z-index: 999; /* Über anderen Inhalten liegen */
+    background-image: url('Nexus.jpg');
+    background-size: auto 80px;
+    background-position: 20px 10px;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+            .box {
+                background-image: none; /* Hintergrundbild ausblenden */
+            }
+        }
+        
+        @media only screen and (orientation: landscape) and (max-width: 1000px)  {
+    .box {
+        position: relative;
+        width: calc(100% + 40px); /* 100% Breite plus zusätzliche 40px (20px auf jeder Seite) für den Header */
+        margin-left: -20px; /* Ausgleichen der zusätzlichen Breite auf der linken Seite */
+        margin-right: -20px; /* Ausgleichen der zusätzlichen Breite auf der rechten Seite */
+    }
+}
+@media only screen and (max-width: 1000px)  {
+    .box {
+        position: relative;
+        width: calc(100% + 40px); /* 100% Breite plus zusätzliche 40px (20px auf jeder Seite) für den Header */
+        margin-left: -20px; /* Ausgleichen der zusätzlichen Breite auf der linken Seite */
+        margin-right: -20px; /* Ausgleichen der zusätzlichen Breite auf der rechten Seite */
+    }
+}
+@media only screen and (min-width: 1000px) {
+            .box {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                left: 0;
+                z-index: 999;
+            }
+        }
+        body {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+            overflow-x: hidden;
+            background-color: rgb(200, 200, 200);
+        }
+        .box a {
+            margin: 0 30px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        a:hover {
+            color: rgba(68, 68, 68, 0.836);
+        }
+        .Überschrift {
+    color: black;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative; /* Relative Positionierung */
+    text-align: center; /* Zentriert den Text horizontal */
+    text-decoration: none;
+    margin-top: 140px;
+}
+@media only screen and (max-width: 1000px) {
+    .Überschrift {
+        margin-top: 50px; /* Beispielwert anpassen */
+    }
+}
+
+
+.Überschrift::before {
+    content: ''; /* Erstellt ein leeres Element */
+    display: block;
+    width: 100%; /* Volle Breite des Containers */
+    height: 50px; /* Höhe des leeren Elements anpassen */
+    position: absolute; /* Absolute Positionierung relativ zum Elternelement */
+    top: -25px; /* Positioniert das Element über der Überschrift */
+}
+@media only screen and (max-width: 500px) {
+            .Überschrift {
+                white-space: pre-line; /* Zeilenumbruch erzwingen */
+                font-size: 33px;
+                margin-top: 50px;
+            }
+        }
+        .box2 {
+            background-color: rgb(200, 200, 200);
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            margin-left: 25px;
+            margin-right: 25px;
+            letter-spacing: 0,5px;
+            word-spacing: 4px;
+        }
+        @media only screen and (max-width: 500px) {
+            .box2 {
+            background-color: rgb(200, 200, 200);
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            margin-left: 25px;
+            margin-right: 25px;
+            letter-spacing: 0,5px;
+            word-spacing: 4px;
+            }
+        }
+
+        .Unterüberschrift {
+            color: rgb(92, 92, 92);
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            text-decoration: none;
+            margin: 25px;
+        }
+        .Unterüberschrift2 {
+            color: rgb(92, 92, 92);
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            text-decoration: none;
+            margin: 25px;
+        }
+        @media only screen and (max-width: 500px) {
+            .Unterüberschrift {
+                white-space: pre-line;
+                font-size: 30px;
+            }
+            .Unterüberschrift2 {
+                white-space: pre-line;
+                word-break: break-all;
+                font-size: 30px;
+                color: rgb(92, 92, 92);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            text-decoration: none;
+            margin: 25px;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        footer p {
+            color: white;
+        }
+        .footer {
+            color: white;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            font-size: small;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="box">
+        <button class="button-link" onclick="window.location.href='index.html'">Home</button>
+        <button class="button-link" onclick="window.location.href='https://forms.gle/48qVW9LMPQK6uTXu5'">Jetzt bewerben!</button>
+    </h1>
+    <br>
+    <h1 class="Überschrift">Datenschutz&#8203;erklärung:</h1>
+<br>
+<br>
+<br>
+<br>
+Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten (nachfolgend kurz „Daten“) innerhalb unseres Onlineangebotes und der mit ihm verbundenen Webseiten, Funktionen und Inhalte sowie externen Onlinepräsenzen, wie z.B. unser Social Media Profile auf (nachfolgend gemeinsam bezeichnet als „Onlineangebot“). <br>
+    Im Hinblick auf die verwendeten Begrifflichkeiten, wie z.B. „Verarbeitung“ oder „Verantwortlicher“ verweisen wir auf die Definitionen im Art. 4 der Datenschutzgrundverordnung (DSGVO).<br>
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift">Verantwortlicher</h2><br>
+    
+    <h3 class="box2">Leonie Berger<br>
+    Hanauer Landstraße 293<br>
+    60314 Frankfurt am Main<br>
+    E-Mail: nexustech@nexus.com</h3><br>
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift">Arten der verarbeiteten Daten:</h2><br>
+    
+    <h3 class="box2">Bestandsdaten (z.B., Namen, Adressen).<br>
+    Kontaktdaten (z.B., E-Mail, Telefonnummern).<br>
+    Inhaltsdaten (z.B., Texteingaben, Fotografien, Videos).<br>
+    Nutzungsdaten (z.B., Zugriffszeiten).<br>
+    Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen).</h3><br>
+    <br>
+    <br>
+    Bestandsdaten: Bestandsdaten umfassen persönliche Informationen, die zur Identifizierung einer Person dienen, wie Namen und Adressen. Diese Daten sind grundlegende Identifikationsmerkmale und werden häufig für administrative Zwecke sowie zur Kontaktaufnahme verwendet.
+
+Kontaktdaten: Kontaktdaten beziehen sich auf Informationen, die es ermöglichen, mit einer Person in Kontakt zu treten, wie E-Mail-Adressen und Telefonnummern. Diese Daten werden verwendet, um Kommunikation zu ermöglichen und können für Benachrichtigungen, Supportanfragen und Marketingzwecke verwendet werden.
+
+Inhaltsdaten: Inhaltsdaten umfassen alle Informationen, die von Benutzern generiert oder bereitgestellt werden, wie Texteingaben, Fotografien und Videos. Diese Daten können für verschiedene Zwecke verwendet werden, wie z.B. die Bereitstellung von personalisierten Inhalten, die Analyse von Benutzerverhalten und die Optimierung der Website-Funktionalität.
+
+Nutzungsdaten: Nutzungsdaten erfassen Informationen über die Nutzung des Onlineangebots durch Benutzer, wie Zugriffszeiten, aufgerufene Seiten und Interaktionsmuster. Diese Daten werden verwendet, um die Leistung der Website zu analysieren, das Nutzererlebnis zu verbessern und Sicherheitsrisiken zu erkennen.
+
+Meta-/Kommunikationsdaten: Meta-/Kommunikationsdaten umfassen technische Informationen, die im Rahmen der Kommunikation zwischen einem Benutzer und dem Onlineangebot generiert werden, wie Geräteinformationen und IP-Adressen. Diese Daten werden verwendet, um die Interaktion mit der Website zu verfolgen, Sicherheitsmaßnahmen umzusetzen und die Qualität der Dienstleistung zu verbessern.
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift">
+    Kategorien betroffener Personen</h2><br>
+    
+    <h3 class="box2">
+    Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer“).</h3><br>
+    <br>
+    <br>
+    Wir verwenden den Begriff "Nutzer" als Sammelbezeichnung für alle Besucher und Nutzer unseres Onlineangebots. Diese Bezeichnung umfasst Personen, die unsere Website besuchen, Dienste nutzen oder anderweitig mit unserem Onlineangebot interagieren. Wir verwenden diese Bezeichnung, um klarzustellen, dass alle betroffenen Personen, unabhängig von ihrem spezifischen Handlungsverhalten auf unserer Website, unter den Datenschutzbestimmungen fallen und deren Rechte und Freiheiten geschützt werden. Dies ermöglicht es uns, einheitlich über die verschiedenen Interaktionsmöglichkeiten auf unserer Website zu kommunizieren und die Datenschutzprinzipien konsistent anzuwenden.
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift">
+    Zweck der Verarbeitung</h2><br>
+    
+    <h3 class="box2">
+    Zurverfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte.
+    Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern.
+    Sicherheitsmaßnahmen.
+    Reichweitenmessung/Marketing</h3><br>
+    <br>
+    <br>
+    Zur Verfügungstellung des Onlineangebotes, seiner Funktionen und Inhalte: Die Verarbeitung personenbezogener Daten ist erforderlich, um Ihnen das Onlineangebot bereitzustellen und die Funktionen sowie Inhalte der Website zu gewährleisten. Dies beinhaltet die technische Bereitstellung der Website, die Anzeige von Inhalten und die Durchführung von Transaktionen.
+
+Beantwortung von Kontaktanfragen und Kommunikation mit Nutzern: Wenn Sie uns kontaktieren oder Anfragen stellen, verarbeiten wir Ihre personenbezogenen Daten, um auf Ihre Anfragen zu antworten und mit Ihnen zu kommunizieren. Dies kann die Verwendung von Kontaktformularen, E-Mails oder anderen Kommunikationskanälen umfassen.
+
+Sicherheitsmaßnahmen: Wir verarbeiten personenbezogene Daten, um angemessene Sicherheitsmaßnahmen zu implementieren und zu gewährleisten, dass unser Onlineangebot und die darin enthaltenen Daten vor unbefugtem Zugriff, Missbrauch oder Verlust geschützt sind. Dies umfasst die Überwachung von Systemen, die Durchführung von Sicherheitsaudits und die Implementierung von Zugangskontrollen.
+
+Reichweitenmessung/Marketing: Zur Verbesserung unseres Onlineangebots und zur Durchführung von Marketingaktivitäten verarbeiten wir personenbezogene Daten für die Reichweitenmessung und Analyse von Nutzerverhalten. Dies ermöglicht es uns, die Nutzung unserer Website zu verstehen, Trends zu identifizieren, unsere Dienstleistungen zu verbessern und gezielte Marketingkampagnen durchzuführen. Dabei achten wir darauf, die Privatsphäre unserer Nutzer zu respektieren und nur anonymisierte oder pseudonymisierte Daten zu verwenden, soweit möglich.
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift">
+    Maßgebliche Rechtsgrundlagen</h2><br>
+    
+    <h3 class="box2">
+    Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. Sofern die Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, gilt Folgendes: Die Rechtsgrundlage für die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</h3><br>
+    <br>
+    <br>
+    Gemäß Artikel 13 DSGVO möchten wir Ihnen die Rechtsgrundlagen für unsere Datenverarbeitungen transparent machen. Wenn in unserer Datenschutzerklärung die spezifische Rechtsgrundlage nicht angegeben ist, gelten die folgenden Erläuterungen:
+
+Die Rechtsgrundlage für die Einholung von Einwilligungen (Art. 6 Abs. 1 lit. a und Art. 7 DSGVO):
+Einwilligungen sind erforderlich, wenn wir personenbezogene Daten auf Basis Ihrer Zustimmung verarbeiten. Dies gilt insbesondere für den Fall, dass Sie explizit in die Verarbeitung Ihrer Daten für bestimmte Zwecke eingewilligt haben.
+
+Die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen sowie Beantwortung von Anfragen (Art. 6 Abs. 1 lit. b DSGVO):
+Wenn die Verarbeitung Ihrer Daten zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist, beruht diese Verarbeitung auf dieser Rechtsgrundlage. Dies umfasst auch die Bearbeitung von Anfragen, die Sie an uns richten, bevor ein Vertrag abgeschlossen wird.
+
+Die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen (Art. 6 Abs. 1 lit. c DSGVO):
+Sofern wir gesetzlichen Verpflichtungen unterliegen, die eine Verarbeitung Ihrer Daten erfordern, erfolgt dies auf Basis dieser Rechtsgrundlage. Dies kann beispielsweise die Erfüllung von steuerlichen oder buchhalterischen Pflichten umfassen.
+
+Die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO):
+Sofern wir ein berechtigtes Interesse an der Verarbeitung Ihrer Daten haben und dieses Interesse Ihre Grundrechte und -freiheiten nicht überwiegt, erfolgt die Verarbeitung auf dieser Grundlage. Dies kann unter anderem die Verbesserung unserer Dienstleistungen, die Sicherheit unserer Systeme oder Marketingaktivitäten umfassen.
+
+Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen (Art. 6 Abs. 1 lit. d DSGVO):
+Diese Rechtsgrundlage gilt für den seltenen Fall, dass die Verarbeitung personenbezogener Daten erforderlich ist, um lebenswichtige Interessen einer Person zu schützen, insbesondere wenn diese Person nicht in der Lage ist, ihre Einwilligung zu erteilen.
+    <br>
+    <br>
+    <br>
+    <h2 class="Unterüberschrift2">
+    Sicherheitsmaßnahmen</h2>
+    <br>
+    <h3 class="box2">
+    Wir treffen nach Maßgabe der gesetzlichen Vorgaben unter Berücksichtigung des Stands der Technik, der Implementierungskosten und der Art, des Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos für die Rechte und Freiheiten natürlicher Personen, geeignete technische und organisatorische Maßnahmen, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten.</h3><br>
+    <br>
+    <br>
+    Gesetzliche Vorgaben: Wir orientieren uns an den Vorgaben der Datenschutzgesetze und -verordnungen, insbesondere der DSGVO, sowie an anderen relevanten Gesetzen und Vorschriften.
+
+Stand der Technik: Wir verwenden aktuelle Technologien und bewährte Verfahren, um ein angemessenes Schutzniveau für die Verarbeitung personenbezogener Daten zu gewährleisten.
+
+Implementierungskosten: Wir berücksichtigen die Kosten, die mit der Umsetzung und Aufrechterhaltung der erforderlichen Sicherheitsmaßnahmen verbunden sind, um eine angemessene Balance zwischen Schutz und Wirtschaftlichkeit zu erreichen.
+
+Art, Umfang, Umstände und Zwecke der Verarbeitung: Wir passen unsere Sicherheitsmaßnahmen an die spezifischen Anforderungen und Risiken der jeweiligen Datenverarbeitung an.
+
+Eintrittswahrscheinlichkeit und Schwere des Risikos: Wir bewerten die Risiken für die Rechte und Freiheiten der betroffenen Personen und treffen entsprechende Maßnahmen, um diese Risiken zu minimieren.
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer style="background-color: #333; color: #fff; padding: 80px 0; text-align: center;">
+        <p>© 2024 NexusTech GmbH.</p> <br>
+        <div class="footer-links">
+            <h6 class="footer"><a href="Impressum.html">Impressum</a></h6>
+            <h6 class="footer"><a href="Datenschutzerklärung.html">Datenschutzerklärung</a></h6>
+            <h6 class="footer"><a href="Kontakt.html">Kontakt</a></h6>
+        </div>
+        <style>
+            .footer a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+    
+            .footer a:hover {
+                color: #bbb;
+            }
+        </style>
+    </footer>
+    
+</body>
+</html>
